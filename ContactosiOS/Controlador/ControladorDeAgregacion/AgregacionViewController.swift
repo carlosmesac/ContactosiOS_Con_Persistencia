@@ -16,7 +16,7 @@ class AgregacionViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var entradaTelefono: UITextField!
     @IBOutlet weak var entradaFechaCumple: UIDatePicker!
     var coreDataController:CoreDataController?
-    var nuevoContacto: DatosDeContacto?
+    var nuevoContacto: DatosContactoCD?
     
     override func viewDidLoad() {
         super.viewDidLoad()
