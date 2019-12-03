@@ -54,14 +54,7 @@ class MasterViewController: UITableViewController {
         if segue.identifier == "retornaDone" {
             // obtener el controlador de agregación
             let controladorAgregacion = segue.source as! AgregacionViewController
-            // obtener nuevo contacto
-            if let aux = controladorAgregacion.nuevoContacto {
-                // agrega nuevo contacto a la lista
-                coreDataController?.insertarContacto(nombre: aux.nombre, direccion: aux.direccion, telefono: aux.telefono, fechaCumple: aux.fechaCumple, foto: aux.foto)           }
-            else {
-                print("Falló el retorno del segue en done")
-                print(controladorAgregacion.nuevoContacto)
-            }
+
             //recarga los datos de la tabla
             self.tableView.reloadData()
             //Cierra la escena de agregación

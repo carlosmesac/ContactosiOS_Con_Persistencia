@@ -17,10 +17,10 @@ extension DatosContactoCD {
         return NSFetchRequest<DatosContactoCD>(entityName: "Contactos")
     }
 
-    @NSManaged public var nombre: String
-    @NSManaged public var direccion: String
-    @NSManaged public var telefono: String
-    @NSManaged public var fechaCumple: NSDate
-    @NSManaged public var foto: NSData
+    @NSManaged public var nombre: String?
+    @NSManaged public var direccion: String?
+    @NSManaged public var telefono: String?
+    @NSManaged public var fechaCumple: NSDate?
+    @NSManaged public var foto: NSData?
 
 }
