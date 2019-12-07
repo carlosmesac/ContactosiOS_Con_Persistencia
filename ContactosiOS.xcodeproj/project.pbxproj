@@ -62,7 +62,7 @@
 		FBCFF3BA23968AEB00FFE5DF /* MisContactosPEM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MisContactosPEM.xcdatamodel; sourceTree = "<group>"; };
 		FBCFF3BC23968C2900FFE5DF /* DatosContactoCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatosContactoCD+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FBCFF3BD23968C2900FFE5DF /* DatosContactoCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatosContactoCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		FBCFF3C223968EFE00FFE5DF /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataController.swift; path = ../../../../material/CoreDataController.swift; sourceTree = "<group>"; };
+		FBCFF3C223968EFE00FFE5DF /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
