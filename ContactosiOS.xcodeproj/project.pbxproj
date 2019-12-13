@@ -17,6 +17,9 @@
 		37280EC12167AA7400F67912 /* ContactosiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37280EC02167AA7400F67912 /* ContactosiOSUITests.swift */; };
 		891D26EC239518A2005DA353 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D26EB239518A2005DA353 /* QRViewController.swift */; };
 		8935530423909E4C00E3991B /* AgregacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935530323909E4C00E3991B /* AgregacionViewController.swift */; };
+		FB0291F423A37FB700C3C394 /* ContactosEnGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0291F323A37FB700C3C394 /* ContactosEnGridViewController.swift */; };
+		FB0291F823A381A600C3C394 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0291F723A381A600C3C394 /* CollectionViewCell.swift */; };
+		FB69B5E9239EE0B300297AEA /* AgregacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB69B5E8239EE0B300297AEA /* AgregacionViewController.swift */; };
 		FBCFF3B823968A5300FFE5DF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCFF3B723968A5300FFE5DF /* CoreData.framework */; };
 		FBCFF3BB23968AEB00FFE5DF /* MisContactosPEM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBCFF3B923968AEB00FFE5DF /* MisContactosPEM.xcdatamodeld */; };
 		FBCFF3BE23968C2900FFE5DF /* DatosContactoCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFF3BC23968C2900FFE5DF /* DatosContactoCD+CoreDataClass.swift */; };
@@ -58,6 +61,9 @@
 		37280EC22167AA7400F67912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		891D26EB239518A2005DA353 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		8935530323909E4C00E3991B /* AgregacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregacionViewController.swift; sourceTree = "<group>"; };
+		FB0291F323A37FB700C3C394 /* ContactosEnGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosEnGridViewController.swift; sourceTree = "<group>"; };
+		FB0291F723A381A600C3C394 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		FB69B5E8239EE0B300297AEA /* AgregacionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgregacionViewController.swift; sourceTree = "<group>"; };
 		FBCFF3B723968A5300FFE5DF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FBCFF3BA23968AEB00FFE5DF /* MisContactosPEM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MisContactosPEM.xcdatamodel; sourceTree = "<group>"; };
 		FBCFF3BC23968C2900FFE5DF /* DatosContactoCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatosContactoCD+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 		37280ECF2167ACD500F67912 /* Controlador */ = {
 			isa = PBXGroup;
 			children = (
+				FB0291F223A37EAD00C3C394 /* ContoladorGridDetalle */,
 				8935530523909E6600E3991B /* ControladorDeAgregacion */,
 				37280ED12167ADA700F67912 /* ControladorDeDatos */,
 				37280ED02167AD0D00F67912 /* ControladorMaestroDetalle */,
@@ -186,8 +193,18 @@
 			isa = PBXGroup;
 			children = (
 				8935530323909E4C00E3991B /* AgregacionViewController.swift */,
+				FB69B5E8239EE0B300297AEA /* AgregacionViewController.swift */,
 			);
 			path = ControladorDeAgregacion;
+			sourceTree = "<group>";
+		};
+		FB0291F223A37EAD00C3C394 /* ContoladorGridDetalle */ = {
+			isa = PBXGroup;
+			children = (
+				FB0291F323A37FB700C3C394 /* ContactosEnGridViewController.swift */,
+				FB0291F723A381A600C3C394 /* CollectionViewCell.swift */,
+			);
+			path = ContoladorGridDetalle;
 			sourceTree = "<group>";
 		};
 		FBCFF3B623968A5300FFE5DF /* Frameworks */ = {
@@ -331,10 +348,13 @@
 			files = (
 				8935530423909E4C00E3991B /* AgregacionViewController.swift in Sources */,
 				37280EA32167AA7000F67912 /* DetailViewController.swift in Sources */,
+				FB0291F823A381A600C3C394 /* CollectionViewCell.swift in Sources */,
+				FB0291F423A37FB700C3C394 /* ContactosEnGridViewController.swift in Sources */,
 				FBCFF3C323968EFE00FFE5DF /* CoreDataController.swift in Sources */,
 				37280EA12167AA7000F67912 /* MasterViewController.swift in Sources */,
 				891D26EC239518A2005DA353 /* QRViewController.swift in Sources */,
 				FBCFF3BB23968AEB00FFE5DF /* MisContactosPEM.xcdatamodeld in Sources */,
+				FB69B5E9239EE0B300297AEA /* AgregacionViewController.swift in Sources */,
 				37280E9F2167AA7000F67912 /* AppDelegate.swift in Sources */,
 				FBCFF3BF23968C2900FFE5DF /* DatosContactoCD+CoreDataProperties.swift in Sources */,
 				FBCFF3BE23968C2900FFE5DF /* DatosContactoCD+CoreDataClass.swift in Sources */,
