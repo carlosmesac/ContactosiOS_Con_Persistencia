@@ -68,6 +68,51 @@ class ContactosEnGridViewController: UICollectionViewController {
         return cell
     }
 
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+       print("MasteriviewController prepare: segue=\(String(describing: segue.identifier))")
+       
+           if segue.identifier == "MuestraDetallesDelContacto" {
+            let celda : UICollectionViewCell = sender as! UICollectionViewCell
+            if let indexPath = self.collectionView?.indexPath(for: celda) {
+                    let controladorVistaDetalle = segue.destination as! DetailViewController
+                
+                controladorVistaDetalle.datosDeContacto = coreDataController?.cogerContactos()[indexPath.row]
+                   controladorVistaDetalle.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                   controladorVistaDetalle.navigationItem.leftItemsSupplementBackButton = true
+               }
+           }
+       }
+    
+    // MARK: - Segues
+    @IBAction func cancel(segue: UIStoryboardSegue) {
+        print("MasteriviewController cancel: segue=\(String(describing: segue.identifier))")
+        if segue.identifier == "retornaCancel" {
+            // cerramos escena de agregación
+            self.dismiss(animated: true, completion: nil)
+        }
+        else {
+            print(segue.identifier)
+            print("Falló el retorno del segue en CANCEL")
+        }
+    }
+    
+    @IBAction func done(segue: UIStoryboardSegue) {
+        
+        print("MasteriviewController done: segue=\(String(describing: segue.identifier))")
+        
+        if segue.identifier == "retornaDone" {
+            // obtener el controlador de agregación
+            let controladorAgregacion = segue.source as! AgregacionViewController
+
+            //recarga los datos de la tabla
+            self.collectionView!.reloadData()
+            //Cierra la escena de agregación
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     // MARK: UICollectionViewDelegate
 
     /*

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AgregacionViewController: UITableViewController, UITextFieldDelegate {
+class AgregacionViewController: UITableViewController, UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var entradaNombre: UITextField!
     @IBOutlet weak var entradaDireccion: UITextField!
@@ -17,6 +17,7 @@ class AgregacionViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var entradaFechaCumple: UIDatePicker!
     var coreDataController:CoreDataController?
     var nuevoContacto: DatosContactoCD?
+    var foto: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,22 @@ class AgregacionViewController: UITableViewController, UITextFieldDelegate {
     }
     
     // MARK: - Table view data source
+    // pillar la imagen
+    @IBAction func tomarFoto(_ sender: UIButton) {
+        let picker = UIImagePickerController ()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        self.present(picker, animated: true, completion: nil)
+        }
 
+
+
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    picker.dismiss (animated:true, completion: nil)
+    let imagen: UIImage = (info as NSDictionary).object(forKey: "UIImagePickerControllerOriginalImage") as! UIImage
+    self.foto = imagen as UIImage
+    
+}
     /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -108,10 +124,9 @@ class AgregacionViewController: UITableViewController, UITextFieldDelegate {
         print("AgregacionViewController prepare: segue=\(String(describing: segue.identifier))")
 
         if segue.identifier == "retornaDone" {
-            if !(entradaNombre.text!.isEmpty) {
+            if (self.foto != nil){
+            let imagen = self.foto
                 print("Voy a asignar los valores: nombre = \(entradaNombre.text)")
-
-                let imagen = UIImage(named: "persona")
                 let foto: NSData = UIImagePNGRepresentation(imagen!)! as NSData
                 
                 coreDataController?.insertarContacto(nombre: entradaNombre.text!,
@@ -127,3 +142,4 @@ class AgregacionViewController: UITableViewController, UITextFieldDelegate {
         }
     }
 }
+
